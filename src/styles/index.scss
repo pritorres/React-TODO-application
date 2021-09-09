@@ -1,13 +1,59 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+body{
+    background-color: rgb(233, 210, 226);
+    position: absolute;
+}
+h1 {
+    color: rgb(153, 64, 79);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 70px;
+};
+input {
+  border: none;
+  width: 93%;
+  height: 23%;
+};
+.container {
+    
+    display: flex;
+    flex-direction: column;
+};
+.card {
+    padding: 5px;
+    background-color: white;
+    position: relative;
+    width: 700px;
+    height: 200px;
+    z-index: 1;
+    border: 1px solid gray;
+  
+};
+.card::after{
+    display: block;
+    content: " ";
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 680px;
+    height: 5px;
+    bottom: -11px;
+    border-bottom: 1px solid gray
+};
+.card::before {
+    border-bottom: 1px solid gray;
+    display: block;
+    content: " ";
+    background-color: white;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 690px;
+    height: 5px;
+    bottom: -6px;
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+};
