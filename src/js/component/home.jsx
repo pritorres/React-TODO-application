@@ -13,20 +13,37 @@ const Home = () => {
 			setValorInput("");
 		}
 	};
-	const myfunction = valortarea => {
+
+	const myfunction = (valortarea, i) => {
 		return (
-			<div className="inputDiv">
+			<div key={i} className="inputDiv">
 				{valortarea}
-				<button>X</button>
+				<button
+					className="bottonEliminar"
+					onClick={() => {
+						buttonRemove(i);
+					}}>
+					X
+				</button>
 			</div>
 		);
+	};
+	const buttonRemove = i => {
+		let newArray = [...tareas];
+		newArray.splice(i, 1);
+		setTareas(newArray);
+	};
+	let cantidadTareas = tareas.length;
+	const agregarTareas = t => {
+		let x = t == 0 ? "No tasks, add a task" : "Task";
+		return x;
 	};
 	return (
 		<div className="container col-10">
 			<h1>todos</h1>
 			<div className="card">
 				<input
-					placeholder="No tasks, add a task"
+					placeholder={agregarTareas(cantidadTareas)}
 					value={valorInput}
 					type="text"
 					onChange={e => {
@@ -37,6 +54,8 @@ const Home = () => {
 					}}
 				/>
 				{tareas.map(myfunction)}
+
+				<div>{cantidadTareas} Item left </div>
 			</div>
 		</div>
 	);

@@ -11,13 +11,16 @@ h1 {
     font-size: 70px;
 };
 input {
-  
+  border-radius: 5px;
   margin: 2px;
   border: none;
   width: 100%;
   height: 45px;
 };
 .inputDiv{
+    align-items: center;
+    padding-left: 5px;
+    height: 43px;
     display: flex;
     justify-content: space-between;
 }
@@ -27,6 +30,15 @@ button{
 
 
 };
+.bottonEliminar {
+    color: red;
+    visibility: hidden;
+
+};
+
+.inputDiv:hover .bottonEliminar {
+     visibility: visible;
+}
 
 .container {
     
