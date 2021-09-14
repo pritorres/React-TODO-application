@@ -35,7 +35,7 @@ const Home = () => {
 	};
 	let cantidadTareas = tareas.length;
 	const agregarTareas = t => {
-		let x = t == 0 ? "No tasks, add a task" : "Task";
+		let x = t == 0 ? "No tasks, add a task" : "what to needs to be done?";
 		return x;
 	};
 	return (
